@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const jano = new Discord.Client();
+const jano = new Discord.Client(1086277441972084776);
 const jano2 = new Discord.Client();
 const jano3 = new Discord.Client();
 const jano4 = new Discord.Client();
@@ -105,7 +105,7 @@ const jano100 = new Discord.Client();
 ///////////////////
 jano.on("ready", () => {
   var join = jano.channels.get(""); /// id voice
-  if (join) join.join();
+  if (join) join.join($play);
 });
 ///////////////////
 jano2.on("ready", () => {
@@ -603,13 +603,13 @@ jano100.on("ready", () => {
 });
 //////// playing or dnd  streaming ////////
 
-jano.on("ready", () => {
+jano.on("now", () => {
   console.log(`Online In Servers`);
-  let statuses = [`JUST ALLAH`];
+  let statuses = [``];
   setInterval(function() {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
     jano.user.setActivity(STREAMING, {
-      type: "playing",
+      type: "not now",
       url: "https://www.twitch.tv/faith"
     });
   }, 2000);
@@ -1907,7 +1907,7 @@ jano100.on("ready", () => {
 
 //////////////// tokn lera da bne
 
-jano.login("");
+jano.login("1086277441972084776");
 jano2.login("");
 jano3.login("");
 jano4.login("");
